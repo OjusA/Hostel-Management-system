@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Attendance Management</title>
+</head>
+<body>
+<h1>Attendance Management</h1>
+
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Student ID</th>
+        <th>Date</th>
+        <th>Status</th>
+    </tr>
+    <tr th:each="record : ${attendanceRecords}">
+        <td th:text="${record.id}"></td>
+        <td th:text="${record.studentId}"></td>
+        <td th:text="${record.date}"></td>
+        <td th:text="${record.status}"></td>
+    </tr>
+</table>
+
+<br>
+<a href="/" style="text-decoration:none;">🏠 Back to Home</a>
+</body>
+</html>
